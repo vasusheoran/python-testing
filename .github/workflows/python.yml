@@ -1,0 +1,16 @@
+
+name: Python CI with Maven
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+env:
+  mavenGoal: "clean install"
+  
+jobs:
+  build:
+    uses: vasusheoran/GithubActions/.github/workflows/testing.yml@main
